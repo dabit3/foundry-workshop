@@ -75,7 +75,7 @@ Let's create a basic smart contract to test out. Rename Contract.sol to HelloWor
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.13;
+pragma solidity ^0.8.13;
 
 contract HelloWorld {
   string private greeting;
