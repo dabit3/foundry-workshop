@@ -250,7 +250,7 @@ Next, use one of the private keys given to you by Anvil to run this script:
 
 ```sh
 forge script script/Contract.s.sol:ContractScript --fork-url http://localhost:8545 \
---private-key $PRIVATE_KEY
+--private-key $PRIVATE_KEY --broadcast
 ```
 
 Once the contract is deployed, the contract address will be logged out to your terminal.
