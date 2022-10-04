@@ -246,7 +246,13 @@ contract ContractScript is Script {
 }
 ```
 
-Next, use one of the private keys given to you by Anvil to run this script:
+Next, set the `PRIVATE_KEY` variable by using one of the private keys given to you by Anvil:
+
+```sh
+export PRIVATE_KEY=<your-private-key>
+```
+
+To deploy, run this script:
 
 ```sh
 forge script script/Contract.s.sol:ContractScript --fork-url http://localhost:8545 \
@@ -254,6 +260,12 @@ forge script script/Contract.s.sol:ContractScript --fork-url http://localhost:85
 ```
 
 Once the contract is deployed, the contract address will be logged out to your terminal.
+
+Set the `CONTRACT_ADDRESS` variable in your terminal:
+
+```sh
+export CONTRACT_ADDRESS=<your-contract-address>
+```
 
 We can then use cast to interact with it.
 
