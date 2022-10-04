@@ -71,7 +71,7 @@ The `test` directory contains an example test.
 
 The `script` directory contains an example script.
 
-Let's create a basic smart contract to test out. Rename Contract.sol to HelloWorld.sol and update it with the following:
+Let's create a basic smart contract to test out. Rename `Contract.sol` to `HelloWorld.sol` and update it with the following:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -102,9 +102,9 @@ Next, we can run a build and compile the ABIs:
 forge build
 ```
 
-This should create an out directory containing the ABIs for both the main contract as well as the test.
+This should create an `out` directory containing the ABIs for both the main contract as well as the test.
 
-Next, let's update the name of test/Contract.t.sol to test/HelloWorld.t.sol and add the following code:
+Next, let's update the name of `test/Contract.t.sol` to `test/HelloWorld.t.sol` and add the following code:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
