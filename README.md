@@ -281,6 +281,42 @@ For transactions, we can use cast send, passing in a private key and any argumen
 cast send $CONTRACT_ADDRESS "updateGreeting(string)" "My new greeting" --private-key $PRIVATE_KEY
 ```
 
+To test that the greeting has been updated, run the `call` command again:
+
+```sh
+cast call $CONTRACT_ADDRESS "greet()(string)"
+```
+
+## Installing packages
+
+You can install packages using the `forge install` command.
+
+To try this out, let's install OpenZeppelin Contracts, then we'll use them to create an ERC721 token:
+
+```sh
+forge install OpenZeppelin/openzeppelin-contracts
+```
+
+Next, create a file named `remappings.txt` in the root of the project and add the following configuration:
+
+```
+@openzeppelin/=lib/openzeppelin-contracts/
+```
+
+This will allow us to easily import with the following syntax:
+
+```solidity
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+```
+
+## Mocking another user
+
+With OpenZeppelin Contracts installed, let's create a new file named `ERC721.sol` in the `src` directory and add the following code:
+
+```sh
+
+```
+
 ### Conclusion
 
 Foundry is a welcome addition to the web3 stack, bringing improved tooling and performance for smart contract testing and development.
