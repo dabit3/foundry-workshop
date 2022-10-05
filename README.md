@@ -421,8 +421,22 @@ function testBalance() public {
 }
 ```
 
+### Test coverage
+
+You can check for test coverage by running the `coverage` command:
+
+```sh
+forge coverage
+```
+
+To debug in more details what has not been covered, use the `debug` report:
+
+```sh
+forge coverage --report debug
+```
+
+To learn more about what you can do with test coverage, check out [this](https://mirror.xyz/devanon.eth/RrDvKPnlD-pmpuW7hQeR5wWdVjklrpOgPCOA-PJkWFU) blog post or run `forge coverage --help`
+
 ### Conclusion
 
-Foundry is a welcome addition to the web3 stack, bringing improved tooling and performance for smart contract testing and development.
-
-Huge shout out and thank you to Paradigm for their work building developer tooling like Foundry, it is much appreciated.
+To learn more, check out the [Foundry Book](https://book.getfoundry.sh/), [Foundry cheatsheet](https://github.com/dabit3/foundry-cheatsheet), and [this video tutorial](https://www.youtube.com/watch?v=uelA2U9TbgM)
