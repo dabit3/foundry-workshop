@@ -309,7 +309,7 @@ This will allow us to easily import with the following syntax:
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-## Mocking another user
+## ERC721 contract
 
 With OpenZeppelin Contracts installed, let's create a new file named `ERC721.sol` in the `src` directory and add the following code:
 
@@ -320,20 +320,104 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract GameItem is ERC721URIStorage {
+contract DevconPanda is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("GameItem", "ITM") {}
+    constructor() ERC721("DevconPanda", "DCP") {}
 
-    function awardItem(address player, string memory tokenURI) public returns (uint256) {
+    function mint(address user, string memory tokenURI) public returns (uint256) {
         uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
+        _mint(user, newItemId);
         _setTokenURI(newItemId, tokenURI);
 
         _tokenIds.increment();
         return newItemId;
     }
+}
+```
+
+Next, let's write the test.
+
+In the `test` directory, create a new file named `ERC721.t.sol` and add the following code:
+
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+import 'src/ERC721.sol';
+
+contract ERC721Test is Test {
+    DevconPanda devconPanda;
+    address noah = address(0x1);
+    address sofia = address(0x2);
+
+    function setUp() public {
+      devconPanda = new DevconPanda();
+    }
+
+    function testMint() public {
+      devconPanda.mint(noah, "testhash");
+      address owner_of = devconPanda.ownerOf(0);
+      assertEq(noah, owner_of);
+    }
+}
+```
+
+The `testMint` function will test that we have minted a token, and that the owner of that token belongs to the expected owner.
+
+To try it out, run the `test` command:
+
+```sh
+forge test
+```
+
+As you can see, this command will run every test in the entire project.
+
+If you'd like to only test a certain contract, you can run this command:
+
+```sh
+forge test --match-contract ERC721
+```
+
+### Mocking another user
+
+Next let's look at the [prank](https://book.getfoundry.sh/cheatcodes/prank) cheatcode.
+
+`prank` sets `msg.sender` to the specified address for the next call. "The next call" includes static calls as well, but not calls to the cheat code address.
+
+This will allow us to mock, or simulate, whatever user we'd like to simulate in our test.
+
+You can also use [startPrank](https://book.getfoundry.sh/cheatcodes/start-prank) which will set `msg.sender` for all subsequent calls until [stopPrank](https://book.getfoundry.sh/cheatcodes/stop-prank) is called.
+
+Let's try using `prank` to transfer a token to another user.
+
+Because we will be simulating the token owner, we should be able to transfer the token. If we were not simulating the token owner, the test should fail (feel free to give it a shot!).
+
+To test this out, add the following function to the test:
+
+```solidity
+function testTransfer() public {
+  devconPanda.mint(noah, "testhash");
+  vm.startPrank(noah);
+  devconPanda.safeTransferFrom(noah, sofia, 0);
+
+  address ownerOf = devconPanda.ownerOf(0);
+  assertEq(sofia, ownerOf);
+}
+```
+
+Finally, let's check the balance of a user's address:
+
+```solidity
+function testBalance() public {
+  devconPanda.mint(sofia, "testhash");
+  devconPanda.mint(sofia, "testhash");
+  devconPanda.mint(sofia, "testhash");
+
+  uint balance = devconPanda.balanceOf(sofia);
+  assertEq(balance, 3);
 }
 ```
 
