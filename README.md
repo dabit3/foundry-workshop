@@ -39,6 +39,8 @@ The main differences / selling points of Foundry are:
 
 5. Fast CI with the [Foundry GitHub action](https://github.com/foundry-rs/foundry-toolchain).
 
+6. Cast - Cast is Foundry's command-line tool for performing Ethereum RPC calls. You can make smart contract calls, send transactions, or retrieve any type of chain data - all from your command-line!
+
 ## Foundry 
 
 Foundry is made up of 3 CLI tools - [forge](https://github.com/foundry-rs/foundry/tree/master/forge), [cast](https://github.com/foundry-rs/foundry/tree/master/cast), and [anvil](https://github.com/foundry-rs/foundry/tree/master/anvil).
