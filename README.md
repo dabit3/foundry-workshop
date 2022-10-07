@@ -244,7 +244,9 @@ This will start a local network and spin up 10 accounts and private keys and log
 
 Once the network is running, we can use forge to deploy the contract to the network.
 
-To do so, update the script in `script/Contract.s.sol`:
+To do so, update the name of `script/Counter.s.sol` to `script/HelloWorld.s.sol`
+
+Next, update the script in `script/HelloWorld.s.sol`:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -272,7 +274,7 @@ export PRIVATE_KEY=<your-private-key>
 To deploy, run this script:
 
 ```sh
-forge script script/Contract.s.sol:ContractScript --fork-url http://localhost:8545 \
+forge script script/HelloWorld.s.sol:ContractScript --fork-url http://localhost:8545 \
 --private-key $PRIVATE_KEY --broadcast
 ```
 
