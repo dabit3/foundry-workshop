@@ -55,6 +55,9 @@ __Anvil__ is a local Ethereum node, similar to Ganache or Hardhat node.
 To install Foundry, you must first have Rust installed on your machine.
 
 #### Let's build
+
+> If you have any issues with the installation instructions, you can see more detailed instructions [here](https://book.getfoundry.sh/getting-started/installation#install-the-latest-release-by-using-foundryup).
+
 To get started, we'll install the latest release:
 
 ```sh
