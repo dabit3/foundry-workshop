@@ -4,6 +4,17 @@
 
 > Also see [Foundry Book](https://book.getfoundry.sh/), [Foundry cheatsheet](https://github.com/dabit3/foundry-cheatsheet), and [this video tutorial](https://www.youtube.com/watch?v=uelA2U9TbgM)
 
+### Things that we'll be covering
+- Testing & assertions
+- Fuzzing
+- Logging
+- Running a local node
+- Deploying a contract to the local node
+- Calling contracts from the CLI
+- Installing and using libraries
+- Configuring remappings
+- Mocking users
+
 In this workshop  you'll learn how to build, test, and deploy smart contracts with Solidity using Foundry. We'll start with an overview of the various CLIs and libraries that make up [Foundry](https://github.com/foundry-rs/foundry), what they do, and how to install them.
 
 We'll then spin up a new project, walk through the file structure, and create an example smart contract. From there we'll create and run tests for the contract. Next, we'll run a local test Ethereum network, deploy the contract to the network, and use cast to call end execute transactions to the test network.
@@ -328,6 +339,12 @@ This will allow us to easily import with the following syntax:
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+```
+
+You can view all of the automatically inferred remappings for the project by running the following command:
+
+```sh
+forge remappings
 ```
 
 ## ERC721 contract
