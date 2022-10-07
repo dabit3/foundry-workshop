@@ -43,7 +43,7 @@ The main differences / selling points of Foundry are:
 
 ## Foundry 
 
-Foundry is made up of 3 CLI tools - [forge](https://github.com/foundry-rs/foundry/tree/master/forge), [cast](https://github.com/foundry-rs/foundry/tree/master/cast), and [anvil](https://github.com/foundry-rs/foundry/tree/master/anvil).
+Foundry is made up of 3 CLI tools - [Forge](https://github.com/foundry-rs/foundry/tree/master/forge), [Cast](https://github.com/foundry-rs/foundry/tree/master/cast), and [Anvil](https://github.com/foundry-rs/foundry/tree/master/anvil).
 
 __Forge__ is the Ethereum development and testing framework.
 
