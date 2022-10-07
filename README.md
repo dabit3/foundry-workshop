@@ -12,6 +12,10 @@ We'll then deploy the to Optimism to show how to deploy to a live network. Final
 
 By the end of this workshop, you should have a good understanding of how Foundry works and how to use it to build, test, and deploy smart contracts.
 
+### Prerequisites
+
+To use Foundry, you must have [Rust](https://www.rust-lang.org/tools/install) installed on your machine.
+
 ### Foundry Overview
 Paradigm's description of Foundry is that Foundry is a portable, fast and modular toolkit for Ethereum application development.
 
