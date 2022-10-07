@@ -1,6 +1,6 @@
 ## Building and testing smart contracts with Foundry
 
-![A Complete Introduction to Smart Contract Development with Foundry](Banner.jpg)
+![A Complete Introduction to Smart Contract Development with Foundry](banner.jpg)
 
 > Also see [Foundry Book](https://book.getfoundry.sh/), [Foundry cheatsheet](https://github.com/dabit3/foundry-cheatsheet), and [this video tutorial](https://www.youtube.com/watch?v=uelA2U9TbgM)
 
