@@ -1,5 +1,7 @@
 ## Building and testing smart contracts with Foundry
 
+![A Complete Introduction to Smart Contract Development with Foundry](Banner.jpg)
+
 > Also see [Foundry Book](https://book.getfoundry.sh/), [Foundry cheatsheet](https://github.com/dabit3/foundry-cheatsheet), and [this video tutorial](https://www.youtube.com/watch?v=uelA2U9TbgM)
 
 In this workshop  you'll learn how to build, test, and deploy smart contracts with Solidity using Foundry. We'll start with an overview of the various CLIs and libraries that make up [Foundry](https://github.com/foundry-rs/foundry), what they do, and how to install them.
