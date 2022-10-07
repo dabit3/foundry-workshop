@@ -111,14 +111,6 @@ contract HelloWorld {
 }
 ```
 
-Next, we can run a build and compile the ABIs:
-
-```sh
-forge build
-```
-
-This should create an `out` directory containing the ABIs for both the main contract as well as the test.
-
 Next, let's update the name of `test/Contract.t.sol` to `test/HelloWorld.t.sol` and add the following code:
 
 ```solidity
@@ -152,6 +144,16 @@ contract HelloWorldTest is Test {
     }
 }
 ```
+
+Next, we can run a build and compile the ABIs:
+
+```sh
+forge build
+```
+
+This should create an `out` directory containing the ABIs for both the main contract as well as the test.
+
+### Tests
 
 Forge comes built in with some really great testing features like assertions and gas cost snapshots.
 
