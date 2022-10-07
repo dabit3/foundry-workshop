@@ -2,6 +2,8 @@
 
 ![A Complete Introduction to Smart Contract Development with Foundry](banner.jpg)
 
+The slides for this workshop are available [here](https://docs.google.com/presentation/d/1EhguN0lf6jY8K2Lq7WuXqk9boIErpd3lTRVNFMFzpug/edit?usp=sharing)
+
 > Also see [Foundry Book](https://book.getfoundry.sh/), [Foundry cheatsheet](https://github.com/dabit3/foundry-cheatsheet), and [this video tutorial](https://www.youtube.com/watch?v=uelA2U9TbgM)
 
 ### Things that we'll be covering
