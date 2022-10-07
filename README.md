@@ -86,7 +86,7 @@ The `test` directory contains an example test.
 
 The `script` directory contains an example script.
 
-Let's create a basic smart contract to test out. Rename `Contract.sol` to `HelloWorld.sol` and update it with the following:
+Let's create a basic smart contract to test out. Rename `Counter.sol` to `HelloWorld.sol` and update it with the following:
 
 ```solidity
 // SPDX-License-Identifier: MIT
