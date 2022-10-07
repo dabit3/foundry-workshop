@@ -111,7 +111,7 @@ contract HelloWorld {
 }
 ```
 
-Next, let's update the name of `test/Contract.t.sol` to `test/HelloWorld.t.sol` and add the following code:
+Next, let's update the name of `test/Counter.t.sol` to `test/HelloWorld.t.sol` and add the following code:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
