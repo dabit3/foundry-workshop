@@ -71,7 +71,7 @@ To install Foundry, you must first have Rust installed on your machine.
 
 ### VS Code Solidity configuration
 
-If you're using VS Code, consider setting up the following configuration so that your text editor knows where to find the dependencies and your Solidity code by setting:
+If you're using VS Code, consider setting up the following Solidity configurations so that your text editor knows where to find the dependencies and your Solidity code by setting:
 
 1. Package Default Dependencies Contracts Directory as `src`
 2. Package Default Dependencies Directory as `lib`
@@ -335,6 +335,8 @@ cast call $CONTRACT_ADDRESS "greet()(string)"
 You can install packages using the `forge install` command.
 
 To try this out, let's install OpenZeppelin Contracts, then we'll use them to create an ERC721 token:
+
+> You may need to add and commit any changes to your code to `git` in order to run the install script.
 
 ```sh
 forge install OpenZeppelin/openzeppelin-contracts
