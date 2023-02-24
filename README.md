@@ -69,6 +69,15 @@ __Anvil__ is a local Ethereum node, similar to Ganache or Hardhat node.
 #### Prerequisites
 To install Foundry, you must first have Rust installed on your machine.
 
+### VS Code Solidity configuration
+
+If you're using VS Code, consider setting up the following configuration so that your text editor knows where to find the dependencies and your Solidity code by setting:
+
+1. Package Default Dependencies Contracts Directory as `src`
+2. Package Default Dependencies Directory as `lib`
+
+![Solidity configuration](https://arweave.net/RSkSJjbe8XfUC1CUR48yrFJ9rvRQFqfFeBCoopJrlKE)
+
 #### Let's build
 
 > If you have any issues with the installation instructions, you can see more detailed instructions [here](https://book.getfoundry.sh/getting-started/installation#install-the-latest-release-by-using-foundryup).
